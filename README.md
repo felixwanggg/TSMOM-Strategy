@@ -47,11 +47,10 @@ Visualizing the distribution of returns and technical indicators.
 Checking correlations between features.
 
 Stepwise Regression:
-
+=
 I eliminate irrelevant features using stepwise regression, ensuring that only the most relevant technical indicators are used for training the model.
 
 Modeling:
-
 I use a soft voting classifier composed of Random Forest, SVM, and XGBoost models to predict market direction.
 The model is trained on data from 2018 to 2024, and the results are evaluated by comparing the cumulative return of the strategy versus the asset.
 
