@@ -1,4 +1,5 @@
 Time Series Momentum Strategy
+
 This project applies a time series momentum (TSMOM) strategy to historical financial data. The strategy involves defining several key technical indicators, performing exploratory data analysis (EDA), feature selection using stepwise regression, and then applying a soft voting classifier to predict market movement. The data spans from 2018 to 2024, and the goal is to backtest the strategy and assess its performance.
 
 Project Structure
@@ -21,3 +22,26 @@ Modeling with Soft Voting Classifier:
 
 We apply a soft voting classifier that combines multiple models (Random Forest, SVM, and XGBoost) to predict market direction.
 The classifier uses majority voting to improve the robustness and accuracy of predictions.
+
+
+Data
+The dataset consists of historical financial data from 2018 to 2024. The data includes daily prices (open, close, high, low) and technical indicators derived from those prices.
+
+Methodology
+Technical Indicator Calculation:
+
+Using the adjusted closing price of each asset, the project calculates various indicators that form the basis for the strategy.
+Exploratory Data Analysis (EDA):
+
+Before training the model, we perform EDA to check for patterns and relationships between features. This includes:
+Visualizing the distribution of returns and technical indicators.
+Checking correlations between features.
+Stepwise Regression:
+
+We eliminate irrelevant features using stepwise regression, ensuring that only the most relevant technical indicators are used for training the model.
+Modeling:
+
+We use a soft voting classifier composed of Random Forest, SVM, and XGBoost models to predict market direction.
+The model is trained on data from 2018 to 2024, and the results are evaluated by comparing the cumulative return of the strategy versus the asset.
+Results
+The strategy's performance is visualized by plotting the cumulative return of the strategy versus the asset over time. The model's performance is measured in terms of accuracy, Sharpe ratio, and cumulative returns.
